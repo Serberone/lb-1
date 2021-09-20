@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Редактирование</title>
+</head>
+<body>
+<div class="container">
+    <h2>Редактирование</h2>
+    <br>
+    <form method="post">
+        <div class="form-group">
+            <label for="nameCompany">Название компании</label>
+            <input type="text" th:value="${stocks.getNameCompany()}" class="form-control" name="nameCompany"
+                   id="nameCompany" placeholder="Введите название компании">
+            <br>
+        </div>
+        <div class="form-group">
+            <label for="cost">Стоимость</label>
+
+            <input type="number" th:value="${stocks.getCost()}" class="form-control" name="cost" id="cost"
+                   placeholder="Введите стоимость">
+            <br>
+        </div>
+        <button type="submit" class="btn btn-success">Редактировать</button>
+        <a class="btn btn-outline-secondary" href="/" role="button">Отменить</a>
+    </form>
+</div>
+</body>
+</html>
